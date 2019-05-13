@@ -26,7 +26,7 @@ ui <- shinyUI(fluidPage(
   )
 ))
 
-server <- shinyServer(function(input, output,session) {
+shinyServer(function(input, output,session) {
   
   observe({
     if(input$viewdataradio == "patient"){
@@ -78,6 +78,7 @@ server <- shinyServer(function(input, output,session) {
         }
     })
   })
+})
 })
 
 shinyApp(ui=ui,server=server)
